@@ -1,7 +1,7 @@
 <template>
   <div>
     <div>
-      <Header v-on:change-filter="searched" />
+      <Header @change-filter="searched(filters)" />
     </div>
     <div>
       <div class="container">
@@ -35,11 +35,12 @@ import SearchBar from "./components/SearchBar.vue";
         this.records = data;
       });
   },
-  computed: {
-    searched: function(name: any) {
-      console.log("FUCK THIS SHIT IT FUCKING DOESN'T WORK!" + name[0]);
+  methods: {
+    searched: function(filters: string) {
+      console.log("FUCK THIS SHIT IT FUCKING DOESN'T WORK! " + filters);
     },
   },
+  computed: {},
 })
 export default class App extends Vue {}
 </script>
