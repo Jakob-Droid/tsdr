@@ -3,7 +3,7 @@
     <h1 class="border border-dark text-center">
       DR Music
     </h1>
-    <SearchBar @change-filter="$emit('change-filter', "Hallo")" />
+    <SearchBar @change-filter="$emit('change-filter', filters)" />
   </div>
 </template>
 
